@@ -1,0 +1,7 @@
+{
+  "name": "psytech",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
