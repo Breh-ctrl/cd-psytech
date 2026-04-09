@@ -20,7 +20,39 @@
 }
 
 ion-content {
-  --background: #86BAC7;
+  --background: #79ABB8;
+}
+
+.onda-topo, .onda-fundo {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 0;
+}
+
+.onda-topo {
+  top: 0;
+  transform: rotate(180deg) scaleX(-1); /* Gira a onda para ela 'nascer' do teto */
+}
+
+.onda-fundo {
+  bottom: 0;
+  transform: scaleX(-1);
+  /* Não precisa de transform, pois o desenho já nasce na base */
+}
+
+/* Garante que o tamanho seja o mesmo para as duas */
+.onda-topo svg, .onda-fundo svg {
+  width: 100%;
+  height: 140px; 
+}
+
+
+/* Garante que o texto não fique "atrás" da cor da onda */
+.logo, .app, .botao, .informacoes {
+  position: relative;
+  z-index: 1;
 }
 
 .logo {
@@ -75,5 +107,6 @@ ion-content {
 
 .olho {
    color: darkorange;
-
 }
+
+
