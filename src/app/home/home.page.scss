@@ -21,6 +21,10 @@
 
 ion-content {
   --background: #79ABB8;
+  --position: relative; 
+  display: flex;
+  flex-direction: column;
+  --padding-bottom: 0px !important;
 }
 
 .onda-topo, .onda-fundo {
@@ -33,21 +37,30 @@ ion-content {
 
 .onda-topo {
   top: 0;
-  transform: rotate(180deg) scaleX(-1); /* Gira a onda para ela 'nascer' do teto */
+  /* Gira a onda para ela 'nascer' do teto */
+  transform: rotate(180deg) scaleX(-1);
 }
 
 .onda-fundo {
-  bottom: 0;
   transform: scaleX(-1);
   /* Não precisa de transform, pois o desenho já nasce na base */
+  
+  position: absolute;
+  bottom: -9px !important;
+  margin-bottom: 0 !important;
+  line-height: 0; /* Remove espaços de respiro de fontes/SVG */
+  left: 0;
+  width: 100%;
+  height: 150px;       /* Defina uma altura fixa para ela não sumir */
+  z-index: 1;   
 }
 
 /* Garante que o tamanho seja o mesmo para as duas */
 .onda-topo svg, .onda-fundo svg {
   width: 100%;
   height: 140px; 
+  display: block; /* Tira o comportamento de texto e vira bloco */
 }
-
 
 /* Garante que o texto não fique "atrás" da cor da onda */
 .logo, .app, .botao, .informacoes {
@@ -58,14 +71,19 @@ ion-content {
 .logo {
   display: flex;
   align-items: center;
-  margin-bottom: 50px; /**impurra pra baixo as outras coisas*/
-  margin-top: 60px; /**impurra ela mesma pra baixo*/
+   /**impurra pra baixo as outras coisas*/
+  margin-bottom: 68px; 
+  /**impurra ela mesma pra baixo*/
+  margin-top: 60px;
+  /**sombra do titulo**/
   text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
 }
 
 .logo-img {
-  height: 55px; /**deformacao da imagem*/
-  width: auto; /**tamanho da img**/
+  /**deformacao da imagem*/
+  height: 55px;
+  /**tamanho da img**/
+  width: auto;
   margin-right: -20px;
   margin-left: 20px;
   padding: 0;
@@ -74,39 +92,68 @@ ion-content {
 .app {
   display: flex;
   text-align: center;
-  font-size: 50px;
+  /**cores**/
   color: #ECEEF2;
+  /**configuracoes da fonte**/
   font-family: "Quattrocento", serif;
   font-weight: 700;
+  font-size: 50px;
   letter-spacing: 5px; 
 }
 
-.informacoes {
+.informacoes::part(native) {
   display: block;
   margin: auto;
+  margin-bottom:40px;
   width: 300px;
   border-radius: 80px;
   height: 59px;
+  /**cores**/
   color: #4B4841;
   --background: #C1DCE3;
-  --font-family: "Quattrocento", serif;
+  /**configuracoes da fonte**/
+  font-family: "Quattrocento", serif;
   font-weight: 700;
+}
+
+/**descubrir se tem como por fonte em label**/
+.informacoes::part(label) {
+  font-family: "Quattrocento", serif;
+  font-weight: 700;
+  color: #4B4841;
 }
 
 .botao {
   display: block;
-  width: 300px;
-  height: 59px;
-  margin: 10px 20px;
+  margin: 16px 20px 0;
   --border-radius: 80px;
-  color: #4B4841;
-  --background: #AAD2DC; 
-  font-family: "Quattrocento", serif;
+  height: 59px;
+  /**cores**/
+  --color: #4B4841;
+  --background: #C1DCE3;
+  /**configuracoes da fonte**/
   font-weight: 700;
-}
+  letter-spacing: 1px; 
+  font-family: "Quattrocento", serif;
+  }
 
-.olho {
-   color: darkorange;
+.link_login {
+  position: absolute;
+  /* fica acima da onda */
+  bottom: 80px;
+  width: 100%;
+  text-align: left;
+  margin: 47px;
+  background: transparent !important;
+  z-index: 10;
+  /* Cor do link */
+  color: #4f5461;
+  /**configuracoes da fonte**/        
+  font-weight: bold;
+  letter-spacing: 0px;
+  font-family: "Quattrocento", serif;        
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 
