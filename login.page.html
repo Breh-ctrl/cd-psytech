@@ -1,0 +1,38 @@
+<title>App PsyTech</title>
+  
+  <!-- cadastro -->
+  <ion-content scroll-y="false" class="cadastro ion-padding">
+    
+  <!--nome do app-->
+    <ion-title class="app">PsyTech</ion-title>
+
+  <!--logo do app-->
+    <img src="assets/Logo.png" class="logo">
+    
+      
+      <!-- Parte do CRP do médico -->
+        <h1>Sou Médico</h1>
+        <ion-item class="informacoes" fill="outline">
+          <ion-input label="CRP:" labelPlacement="floating" placeholder="Digite aqui" type="text"></ion-input>
+          </ion-item>
+        
+     
+
+
+        <!-- Parte do CPF do paciente -->
+        <h1>Sou Paciente</h1>
+        <ion-item class="informacoes" fill="outline">
+          <ion-input label="CPF:" labelPlacement="floating" placeholder="DiSe aqui" type="password"></ion-input>
+          </ion-item>
+
+      
+
+        <!-- Botão de entrar -->
+      <ion-button class="botao" expand="block">Entrar</ion-button>
+
+
+    <!-- Texto de Cadastrar (troca da pagina de login para cadastro) -->
+<ion-text routerLink="/home" style="cursor: pointer;">
+  Cadastrar
+</ion-text>
+  </ion-content>
