@@ -116,7 +116,12 @@ ion-content {
   font-weight: 700;
 }
 
-/**descubrir se tem como por fonte em label**/
+ion-item {
+  --inner-border-width: 0;
+  --outer-border-width: 0;
+}
+
+/**descubrir se tem como por fonte em label**/ /**ainda nao achei um jeito**/
 .informacoes::part(label) {
   font-family: "Quattrocento", serif;
   font-weight: 700;

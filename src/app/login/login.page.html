@@ -2,17 +2,26 @@
   
   <!-- cadastro -->
   <ion-content scroll-y="false" class="cadastro ion-padding">
+
+  <!-- ondas de cima -->
+  <div class="onda-topo">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#86bac7" d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,245C672,245,768,203,864,181.3C960,160,1056,160,1152,176C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </div>
     
   <!--nome do app-->
-    <ion-title class="app">PsyTech</ion-title>
+  <div class="logo">
+    <!--logo do app-->
+    <img src="assets/Logo.png" class="logo-img">
+    <ion-title class="app">PSYTECH</ion-title>
+  </div>
 
-  <!--logo do app-->
-    <img src="assets/Logo.png" class="logo">
-    
-      
+
+      <div class="itens">
       <!-- Parte do CRP do médico -->
-        <h1>Sou Médico</h1>
-        <ion-item class="informacoes" fill="outline">
+        <h1 class="nomes">Sou Médico</h1>
+        <ion-item class="informacoes" fill="none">
           <ion-input label="CRP:" labelPlacement="floating" placeholder="Digite aqui" type="text"></ion-input>
           </ion-item>
         
@@ -20,11 +29,13 @@
 
 
         <!-- Parte do CPF do paciente -->
-        <h1>Sou Paciente</h1>
-        <ion-item class="informacoes" fill="outline">
-          <ion-input label="CPF:" labelPlacement="floating" placeholder="Digite aqui" type="text"></ion-input>
-          <!-- Parte da Senha do paciente -->
+        <h1 class="nomes">Sou Paciente</h1>
+        <ion-item class="informacoes" fill="none">
+          <ion-input label="CPF:" labelPlacement="floating" placeholder="Digite aqui" type="password"></ion-input>
           </ion-item>
+
+
+          <!-- Parte da Senha do paciente -->
           <ion-item class="informacoes" fill="outline">
             <ion-input label="Senha:" labelPlacement="floating" placeholder="Digite aqui" type="password"></ion-input>
             </ion-item>
@@ -33,11 +44,17 @@
 
         <!-- Botão de entrar -->
       <ion-button class="botao" expand="block">Entrar</ion-button>
+     </div>
 
 
     <!-- Texto de Cadastrar (troca da pagina de login para cadastro) -->
-<ion-text routerLink="/home" style="cursor: pointer;">
+<ion-text class="link_cadastro" routerLink="/home" style="cursor: pointer;">
   Cadastrar
 </ion-text>
   </ion-content>
 
+<div class="onda-fundo">
+  <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+    <path fill="#86bac7" d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,245C672,245,768,203,864,181.3C960,160,1056,160,1152,176C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+  </svg>
+</div>
