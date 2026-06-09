@@ -1,0 +1,87 @@
+<ion-app>
+
+  <!-- MENU lateral -->
+  
+  <ion-menu class="cor_side" contentId="main-content">
+    <ion-header>
+      <ion-toolbar class="cor_menu">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="cor_barra">
+      <ion-list>
+        <ion-item button (click)="irPara('conta')">Conta</ion-item>
+        <ion-item button (click)="irPara('configuracoes')">Configurações</ion-item>
+        <ion-item button (click)="irPara('suporte')">Suporte</ion-item>
+        <ion-item button (click)="irPara('login')">Sair</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+   
+  <div class="ion-page" id="main-content">
+
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons>
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+        <ion-title></ion-title>
+     
+    </ion-header>
+
+    <ion-content class="fundo_menu" fullscreen="true">
+
+      <ion-searchbar class="pesquisa" placeholder="Buscar..."></ion-searchbar>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6"><ion-button expand="block" class="opcoes_pesquisa" style="color: #5e6678;">psiquiatra</ion-button></ion-col>
+          <ion-col size="6"><ion-button expand="block" class="opcoes_pesquisa" style="color: #5e6678;">terapeuta</ion-button></ion-col>
+          <ion-col size="6"><ion-button expand="block" class="opcoes_pesquisa" style="color: #5e6678;" >psicólogo</ion-button></ion-col>
+          <ion-col size="6"><ion-button expand="block" class="opcoes_pesquisa" style="color: #5e6678;">...</ion-button></ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-item-divider class="faixa-divisora"></ion-item-divider>
+      <ion-card class="instituicao">
+        <ion-card-header>
+          <ion-card-title style="color: #5e6678;">Instituições</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-item class="op_instituicao" style="color: #5e6678;">Nome da instituição</ion-item>
+          <ion-item class="op_instituicao" style="color: #5e6678;">Nome da instituição</ion-item>
+          <ion-item class="op_instituicao" style="color: #5e6678;">Nome da instituição</ion-item>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-content>
+
+    <!-- TABS -->
+    <ion-tabs>
+      <ion-router-outlet></ion-router-outlet>
+
+      <ion-tab-bar slot="bottom" class="tabs_cor">
+        <ion-tab-button tab="home">
+          <ion-icon size="large" class="icon" name="home-outline"></ion-icon>
+          <ion-label></ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="medico">
+          <ion-icon size="large" class="icon" src="assets/icon/medico.svg"></ion-icon>
+          <ion-label></ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="agenda">
+          <ion-icon size="large" class="icon" name="calendar"></ion-icon>
+          <ion-label></ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+
+  </div>
+
+</ion-app>

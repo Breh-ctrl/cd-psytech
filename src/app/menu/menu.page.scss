@@ -1,0 +1,73 @@
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.fundo_menu, .cor_barra,.cor_menu, .cor_lista {
+  --background: #79ABB8;
+}
+
+ion-content {
+  --background: transparent;
+}
+
+.tabs_cor, .cor_de_fundo {
+  --background: transparent;
+}
+
+.side_menu {
+  --background: #e3ebf2;
+  --border-radius: 10px;
+  margin: 18px;
+}
+
+.pesquisa {
+  --background: #c1dce3;
+  --border-radius: 80px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin: 0%;
+}
+
+.opcoes_pesquisa {
+  --background: #aad2dc;
+  --border-radius: 80px;
+}
+
+.instituicao {
+  --background: #c1dce3;
+}
+
+.op_instituicao {
+  --background:transparent;
+  margin: 15px;
+}
+
+.icon {
+  --background: #feffff;
+}
+
+.faixa-divisora {
+  --background: #c1dce3;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
