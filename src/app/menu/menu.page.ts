@@ -33,7 +33,7 @@ export class MenuPage {
     addIcons({ 
       'home-outline': homeOutline, 
       'search': searchOutline,      
-      'calendar': calendarOutline,       
+      'calendar': calendarOutline,     
     });
   }
 

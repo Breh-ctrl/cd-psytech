@@ -1,36 +1,44 @@
 <ion-app>
 
   <!-- MENU lateral -->
-  
+
   <ion-menu class="cor_side" contentId="main-content">
-    <ion-header>
-      <ion-toolbar class="cor_menu">
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
 
     <ion-content class="cor_barra">
       <ion-list>
-        <ion-item button (click)="irPara('conta')">Conta</ion-item>
-        <ion-item button (click)="irPara('configuracoes')">Configurações</ion-item>
-        <ion-item button (click)="irPara('suporte')">Suporte</ion-item>
-        <ion-item button (click)="irPara('login')">Sair</ion-item>
+
+        <ion-item button lines="none" class="item-menu" (click)="irPara('conta')">
+         <ion-icon class="icon" slot="start" name="person-outline"></ion-icon>Conta</ion-item>
+
+        <ion-item button lines="none" class="item-menu" (click)="irPara('configuracoes')">
+        <ion-icon class="icon" slot="start" name="settings-outline"></ion-icon>Configurações</ion-item>
+
+        <ion-item button lines="none" class="item-menu" (click)="irPara('suporte')">
+        <ion-icon class="icon" slot="start" name="help-circle-outline"></ion-icon>Suporte</ion-item>
+
+        <ion-item button lines="none" class="item-menu" (click)="irPara('login')">
+        <ion-icon class="icon" slot="start" name="log-out-outline"></ion-icon>Sair</ion-item>
+
       </ion-list>
+
+       <img src="assets/logo nova.png" class="logo-img">
+
     </ion-content>
   </ion-menu>
 
   <!-- CONTEÚDO PRINCIPAL -->
-   
+
   <div class="ion-page" id="main-content">
 
     <ion-header>
       <ion-toolbar>
-        <ion-buttons>
-          <ion-menu-button></ion-menu-button>
+        <ion-buttons slot="start">
+          <ion-menu-button style="color:white;transform: scale(1.4);margin-left:12px;">
+          </ion-menu-button>
         </ion-buttons>
       </ion-toolbar>
-        <ion-title></ion-title>
-     
+      <ion-title></ion-title>
+
     </ion-header>
 
     <ion-content class="fundo_menu" fullscreen="true">
@@ -39,10 +47,14 @@
 
       <ion-grid>
         <ion-row>
-          <ion-col size="6"><ion-button expand="block" class="opcoes_pesquisa" style="color: #5e6678;">psiquiatra</ion-button></ion-col>
-          <ion-col size="6"><ion-button expand="block" class="opcoes_pesquisa" style="color: #5e6678;">terapeuta</ion-button></ion-col>
-          <ion-col size="6"><ion-button expand="block" class="opcoes_pesquisa" style="color: #5e6678;" >psicólogo</ion-button></ion-col>
-          <ion-col size="6"><ion-button expand="block" class="opcoes_pesquisa" style="color: #5e6678;">...</ion-button></ion-col>
+          <ion-col size="6"><ion-button expand="block" class="opcoes_pesquisa"
+              style="color: #5e6678;">psiquiatra</ion-button></ion-col>
+          <ion-col size="6"><ion-button expand="block" class="opcoes_pesquisa"
+              style="color: #5e6678;">terapeuta</ion-button></ion-col>
+          <ion-col size="6"><ion-button expand="block" class="opcoes_pesquisa"
+              style="color: #5e6678;">psicólogo</ion-button></ion-col>
+          <ion-col size="6"><ion-button expand="block" class="opcoes_pesquisa"
+              style="color: #5e6678;">...</ion-button></ion-col>
         </ion-row>
       </ion-grid>
       <ion-item-divider class="faixa-divisora"></ion-item-divider>
@@ -52,9 +64,9 @@
         </ion-card-header>
 
         <ion-card-content>
-          <ion-item class="op_instituicao" style="color: #5e6678;">Nome da instituição</ion-item>
-          <ion-item class="op_instituicao" style="color: #5e6678;">Nome da instituição</ion-item>
-          <ion-item class="op_instituicao" style="color: #5e6678;">Nome da instituição</ion-item>
+          <ion-item lines="none" class="op_instituicao" style="color: #5e6678;">Nome da instituição</ion-item>
+          <ion-item lines="none" class="op_instituicao" style="color: #5e6678;">Nome da instituição</ion-item>
+          <ion-item lines="none" class="op_instituicao" style="color: #5e6678;">Nome da instituição</ion-item>
         </ion-card-content>
       </ion-card>
 
@@ -71,7 +83,7 @@
         </ion-tab-button>
 
         <ion-tab-button tab="medico">
-          <ion-icon size="large" class="icon" src="assets/icon/medico.svg"></ion-icon>
+          <ion-icon size="large" class="icon_medico" src="assets/icon/medico.svg"></ion-icon>
           <ion-label></ion-label>
         </ion-tab-button>
 

@@ -16,16 +16,37 @@
   text-decoration: none;
 }
 
-.fundo_menu, .cor_barra,.cor_menu, .cor_lista {
+/*cor geral*/
+
+.fundo_menu,
+.cor_barra,
+.cor_menu {
   --background: #79ABB8;
 }
 
-ion-content {
+/*barra de cima*/
+
+ion-toolbar {
   --background: transparent;
+  --border-width: 0;
 }
 
-.tabs_cor, .cor_de_fundo {
-  --background: transparent;
+ion-header {
+  box-shadow: none;
+}
+
+/*Barra de pesquisa*/
+
+.pesquisa {
+  --background: #c1dce3;
+  --border-radius: 50px;
+  color:#5b6680;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
 }
 
 .side_menu {
@@ -34,36 +55,120 @@ ion-content {
   margin: 18px;
 }
 
-.pesquisa {
-  --background: #c1dce3;
-  --border-radius: 80px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin: 0%;
-}
-
 .opcoes_pesquisa {
-  --background: #aad2dc;
-  --border-radius: 80px;
-}
-
-.instituicao {
   --background: #c1dce3;
+  --border-radius: 40px;
+
+  height: 40px;
+  font-size: 18px;
+  font-weight: 400;
+
+  text-transform: none;
 }
 
-.op_instituicao {
-  --background:transparent;
-  margin: 15px;
-}
-
-.icon {
-  --background: #feffff;
+ion-grid {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .faixa-divisora {
   --background: #c1dce3;
-  margin-top: 50px;
+  height: 16px;
+  margin-top: 25px;
   margin-bottom: 30px;
+}
+
+.instituicao {
+  --background: #c1dce3;
+
+  border-radius: 30px;
+
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 90px;
+
+  box-shadow: none;
+}
+
+ion-card-title {
+  font-size: 22px;
+  font-weight: 20;
+}
+
+
+.op_instituicao {
+  --background: transparent;
+  --padding-start: 0;
+
+  color: #5e6678;
+
+  border-bottom: 2px dashed #8e99a9;
+  margin-bottom: 20px;
+}
+
+.tabs_cor {
+  --background: transparent;
+  border: none;
+}
+
+/*icones*/
+
+.icon {
+  color: white;
+  font-size: 38px;
+}
+
+ion-tab-button {
+  --background: transparent;
+}
+
+/*deixa o svg branco*/
+
+.icon_medico {
+  filter: brightness(0) invert(1);
+}
+
+
+/* SIDE MENU */
+
+ion-menu {
+  --width: 58%;
+}
+
+.item-menu {
+  --background: #d9e3eb;
+
+  margin: 20px;
+  border-radius: 5%;
+
+  color: #5e6678;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.item-menu ion-icon {
+  font-size: 40px;
+  color: #000;
+}
+
+.logo-img {
+  height: auto;
+  width: 60px;
+  margin: 5px;
+  margin-top: 140%;
+}
+
+ion-menu::part(backdrop) {
+  background: transparent;
+}
+
+ion-list {
+  background: transparent;
+}
+
+ion-item {
+  --background: transparent;
 }
 
 html, body {
